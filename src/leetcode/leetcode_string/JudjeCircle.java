@@ -2,11 +2,11 @@ package leetcode.leetcode_string;
 
 import java.util.Scanner;
 
-public class judje_circle {
+public class JudjeCircle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        judje_circle jc = new judje_circle();
+        JudjeCircle jc = new JudjeCircle();
         boolean flag = jc.judgeCircle(s);
         System.out.println(flag);
     }

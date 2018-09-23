@@ -2,11 +2,11 @@ package leetcode.leetcode_string;
 
 import java.util.Scanner;
 
-public class detectCapitalUse {
+public class DetectCapitalUse {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        detectCapitalUse dc = new detectCapitalUse();
+        DetectCapitalUse dc = new DetectCapitalUse();
         boolean flag = dc.detectCapital_Use(s);
         System.out.println(flag);
     }

@@ -2,12 +2,12 @@ package leetcode.leetcode_string;
 
 import java.util.Scanner;
 
-public class find_LUSlength {
+public class FindLUSLength {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s1 = sc.nextLine();
         String s2 = sc.nextLine();
-        find_LUSlength f = new find_LUSlength();
+        FindLUSLength f = new FindLUSLength();
         int n = f.findLUSlength(s1,s2);
         System.out.println(n);
     }

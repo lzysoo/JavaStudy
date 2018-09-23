@@ -2,14 +2,14 @@ package leetcode.leetcode_string;
 
 import java.util.Scanner;
 
-public class to_lower_case {
+public class ToLowerCase {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         String lstr = str.toLowerCase();//用的String的toLowerCase方法
         System.out.println(lstr);
 
-        to_lower_case tl = new to_lower_case();
+        ToLowerCase tl = new ToLowerCase();
         System.out.println(tl.toLowerCase(str));
         //System.out.println(tl.toLowerCase1(str));
     }

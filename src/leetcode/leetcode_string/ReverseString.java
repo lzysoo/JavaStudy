@@ -2,11 +2,11 @@ package leetcode.leetcode_string;
 
 import java.util.Scanner;
 
-public class reverseString {
+public class ReverseString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        reverseString rs = new reverseString();
+        ReverseString rs = new ReverseString();
         System.out.println(rs.reverse_String2(s));
     }
 
