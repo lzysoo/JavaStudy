@@ -1,5 +1,13 @@
 package practices.written_test;
 
+/**
+ * DVTE笔试编程题：
+ * 1-11---1  把 - 换成 00，不能用字符串的替换方法
+ * 输入：一个字符串，一个数字
+ * 输出：当替换后的字符串成长度大于该数字时，返回null
+ *      否则，输出替换后的字符串
+ */
+
 public class PrintNewPhotos {
     public static void main(String[] args) {
         String photo = "1-1--11";

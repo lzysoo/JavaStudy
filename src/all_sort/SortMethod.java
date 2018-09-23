@@ -114,16 +114,16 @@ public class SortMethod {
     }
     //调整大顶堆（仅是调整过程，建立在大顶堆已构建的基础上）
     public static void adjustHeap(int[] arr,int i,int length){
-        int temp = arr[i];
-        for (int k = i * 2 + 1; k < length; k = k * 2 + 1) {
-            if(k + 1 < length && arr[k] < arr[k + 1])
+        int temp = arr[i]; //先取出当前元素 i
+        for (int k = i * 2 + 1; k < length; k = k * 2 + 1) { //从i结点的左子结点开始，也就是 2i + 1 处开始
+            if(k + 1 < length && arr[k] < arr[k + 1])  //如果左子结点小于右子结点，则 k 指向其右结点
                 k++;
-            if(arr[k] > temp){
+            if(arr[k] > temp){ //如果子结点大于父结点，则将子结点的值赋给其父结点（不用进行交换）
                 arr[i] = arr[k];
-                i = k;
+                i = k;  //i = k，这样接下来就会比较 结点k是否符合顺序
             }
             else
-                break;;
+                break;
         }
         arr[i] = temp;
     }
@@ -135,7 +135,7 @@ public class SortMethod {
     }
 
 
-    //归并排序
+    //归并排序,时间复杂度O(nlogn)，最差的时间复杂度也为O(nlogn)，是稳定的排序
     /**
      * 把待排序序列分成若干子序列，使每个子序列有序，然后把有序的子序列合并成整体有序的序列
      */
