@@ -17,26 +17,54 @@ public class LetterCasePermutation {
         String S = sc.nextLine();
         List<String> list = letterCasePermutation(S);
         for (int j = 0; j < list.size(); j++) {
-            System.out.println(list.get(j));
+            System.out.print(list.get(j) + " ");
         }
     }
 
+//    public static List<String> letterCasePermutation(String S) {
+//        List<String> list = new ArrayList<>();
+//        StringBuilder sb = new StringBuilder();
+//        list.add(S);
+//        char[] chs = S.toCharArray();
+//        int i = 0;
+//        while (i < chs.length) {
+//            if (chs[i] >= '0' && chs[i] <= '9')
+//                sb.append(chs[i]);
+//            if (chs[i] >= 'A' && chs[i] <= 'Z')
+//                sb.append(String.valueOf(chs[i]).toLowerCase());
+//            if (chs[i] >= 'a' && chs[i] <= 'z')
+//                sb.append(String.valueOf(chs[i]).toUpperCase());
+//            i++;
+//        }
+//        list.add(sb.toString());
+//        return list;
+//    }
+
     public static List<String> letterCasePermutation(String S) {
         List<String> list = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        list.add(S);
-        char[] chs = S.toCharArray();
-        int i = 0;
-        while (i < chs.length) {
-            if (chs[i] >= '0' && chs[i] <= '9')
-                sb.append(chs[i]);
-            if (chs[i] >= 'A' && chs[i] <= 'Z')
-                sb.append(String.valueOf(chs[i]).toLowerCase());
-            if (chs[i] >= 'a' && chs[i] <= 'z')
-                sb.append(String.valueOf(chs[i]).toUpperCase());
-            i++;
-        }
-        list.add(sb.toString());
+        String temp = "";
+        letter(list,S,temp,0);
         return list;
+    }
+
+    public static void letter(List<String> list,String S, String temp , int index){
+
+        if (S.length() == temp.length())
+            list.add(temp);
+
+        if (index == S.length())
+            return;
+
+        temp += S.charAt(index);
+        letter(list,S,temp,index + 1);
+        temp = temp.substring(0,temp.length() - 1);
+
+        if (S.charAt(index) >= 'a' && S.charAt(index) <= 'z'){//Ð¡Ð´×ÖÄ¸a-z
+            temp += (char)(S.charAt(index) + 'A' - 'a');
+            letter(list,S,temp,index + 1);
+        }else if(S.charAt(index) >= 'A' && S.charAt(index) <= 'Z'){//´óÐ´×ÖÄ¸A-Z
+            temp += (char)(S.charAt(index) + 'a' - 'A');
+            letter(list,S,temp,index + 1);
+        }
     }
 }
