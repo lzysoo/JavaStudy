@@ -1,5 +1,6 @@
-package bishi;
+package practices.written;
 
+//ตÝน้
 public class Recursion {
 
     public static int recursion(int n){

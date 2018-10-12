@@ -13,6 +13,7 @@ public class Sequence {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
+        //Math.ceil()返回大于或等于参数的最小double值，等于一个数学整数
         //System.out.println((int)Math.ceil((Math.sqrt(1 + 8 * n) - 1) / 2));
 
         int k = 1;

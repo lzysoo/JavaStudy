@@ -14,22 +14,22 @@ import java.util.Scanner;
 
 public class MaxProduct {
     public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        String s = sc.nextLine();
-//        String[] split = s.split(",");
-//        String[] strs = new String[split.length];
-//        for(int i = 0;i < split.length;i++){
-//            String str = new String(split[i]);
-//            strs[i] = str;
-//        }
-
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        str = str.substring(1, str.length() -1);
-        String[] strs = str.split(",");
-        for (String s : strs) {
-            s = s.substring(1, s.length() - 1);
+        String s = sc.nextLine();
+        String[] split = s.split(",");
+        String[] strs = new String[split.length];
+        for(int i = 0;i < split.length;i++){
+            String str = new String(split[i]);
+            strs[i] = str;
         }
+
+//        Scanner sc = new Scanner(System.in);
+//        String str = sc.nextLine();
+//        str = str.substring(1, str.length() -1);
+//        String[] strs = str.split(",");
+//        for (String s : strs) {
+//            s = s.substring(1, s.length() - 1);
+//        }
 
         System.out.println(maxProduct(strs));
     }
