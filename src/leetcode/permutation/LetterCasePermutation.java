@@ -21,25 +21,6 @@ public class LetterCasePermutation {
         }
     }
 
-//    public static List<String> letterCasePermutation(String S) {
-//        List<String> list = new ArrayList<>();
-//        StringBuilder sb = new StringBuilder();
-//        list.add(S);
-//        char[] chs = S.toCharArray();
-//        int i = 0;
-//        while (i < chs.length) {
-//            if (chs[i] >= '0' && chs[i] <= '9')
-//                sb.append(chs[i]);
-//            if (chs[i] >= 'A' && chs[i] <= 'Z')
-//                sb.append(String.valueOf(chs[i]).toLowerCase());
-//            if (chs[i] >= 'a' && chs[i] <= 'z')
-//                sb.append(String.valueOf(chs[i]).toUpperCase());
-//            i++;
-//        }
-//        list.add(sb.toString());
-//        return list;
-//    }
-
     public static List<String> letterCasePermutation(String S) {
         List<String> list = new ArrayList<>();
         String temp = "";
@@ -47,7 +28,7 @@ public class LetterCasePermutation {
         return list;
     }
 
-    public static void letter(List<String> list,String S, String temp , int index){
+    public static void letter(List<String> list,String S,String temp,int index){
 
         if (S.length() == temp.length())
             list.add(temp);

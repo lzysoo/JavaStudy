@@ -1,7 +1,7 @@
-package practices.written;
+package leetcode.permutation;
 
 /**
- * 联想笔试：
+ * 剑指offer，联想笔试
  * 输入一个字符串，输出按字典序的所有字符串
  */
 
@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class Permutation {
+public class StringPermutation {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
@@ -44,6 +44,7 @@ public class Permutation {
         }
     }
 
+    // 交换元素
     public static void swap(char[] chs,int i,int j){
         if (i != j) {
             char t = chs[i];
