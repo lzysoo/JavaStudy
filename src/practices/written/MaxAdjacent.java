@@ -1,5 +1,9 @@
 package practices.written;
 
+/**
+ *相邻两个数差最大时，输出这两个数
+ */
+
 public class MaxAdjacent {
     public static void main(String[] args) {
         int[] arr = {1,11,23,24};

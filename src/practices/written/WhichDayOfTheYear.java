@@ -17,9 +17,5 @@ public class WhichDayOfTheYear {
         LocalDate date = LocalDate.of(y,m,d);
         System.out.println(date.getDayOfYear());
 
-//        while (sc.hasNextInt()) {
-//            LocalDate date = LocalDate.of(sc.nextInt(),sc.nextInt(),sc.nextInt());
-//            System.out.println(date.getDayOfYear());
-//        }
     }
 }

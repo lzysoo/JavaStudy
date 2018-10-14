@@ -23,14 +23,6 @@ public class MaxProduct {
             strs[i] = str;
         }
 
-//        Scanner sc = new Scanner(System.in);
-//        String str = sc.nextLine();
-//        str = str.substring(1, str.length() -1);
-//        String[] strs = str.split(",");
-//        for (String s : strs) {
-//            s = s.substring(1, s.length() - 1);
-//        }
-
         System.out.println(maxProduct(strs));
     }
 
